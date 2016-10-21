@@ -1,15 +1,9 @@
 module.exports = {
-  dev: {
-    src: "",
-
-    dest: ""
-  },
   dist: {
     options: {
       cleancss: true
     },
-    src: "",
-    dest: ""
+    src: 'app/css/main.less',
+    dest: 'public/css/app.css'
   }
-
 };

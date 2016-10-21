@@ -1,5 +1,5 @@
 module.exports = {
-  coverage: {
-    path: 'coverage/lcov-report/index.html'
+  web: {
+    path: 'http://localhost:3000'
   }
 };

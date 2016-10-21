@@ -12,7 +12,7 @@ var routes = fm.generate('routes', { reduce: 'nested' });
 router.use(compress());
 router.use(cookieParser());
 router.use(bodyParser.json());
-router.use('/assets', express.static(__dirname + '/' + nconf.get('staticFilePath')));
+router.use('/assets', express.static(__dirname + '/public'));
 
 // Routes for router
 

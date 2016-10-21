@@ -1,4 +1,3 @@
 module.exports = {
-  coverage: 'coverage',
-  dist: 'dist'
+  dist: 'public'
 };

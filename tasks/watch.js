@@ -1,9 +1,9 @@
 module.exports = {
-  tests: {
-    files: ['lib/**/*.js', 'test/**/*.coffee'],
-    tasks: ['mocha'],
+  server: {
+    files: ['lib/**/*.js', 'routes/**/*.js', 'config/**/*.json', 'app.js', 'server.js', 'service.js', 'common/**/*.js'],
+    tasks: ['server'],
     options: {
-      atBegin: true
+      spawn: false
     }
   }
 };

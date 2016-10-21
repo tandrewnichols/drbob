@@ -33,12 +33,12 @@
     "lodash": "^4.16.4",
     "moment": "^2.15.1",
     "nconf": "^0.8.4",
-    "request": "^2.75.0"
+    "request": "^2.75.0",
+    "swig": "^1.4.2"
   },
   "devDependencies": {
     "grunt": "^1.0.1",
     "grunt-contrib-clean": "^1.0.0",
-    "grunt-contrib-coffee": "^1.0.0",
     "grunt-contrib-concat": "^1.0.1",
     "grunt-contrib-copy": "^1.0.0",
     "grunt-contrib-jshint": "^1.0.0",
