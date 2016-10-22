@@ -1,0 +1,25 @@
+<!doctype html>
+<html ng-app="app">
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="content-language" content="en">
+    <meta name="language" content="english">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ title }}</title>
+    <meta name="description" content="{{ description }}" />
+    <meta name="keywords" content="{{join keywords ', '}}" />
+    <link rel="stylesheet" type="text/css" href="/assets/css/app.css" media="all" />
+    {{#each styles}}
+      <link rel="stylesheet" type="text/css" href="{{{.}}}" media="all" />
+    {{/each}}
+  </head>
+  <body>
+    {{> header}}
+    {{{body}}}
+    <script type="text/javascript" src="/assets/js/app.js"></script>
+    {{#each scripts}}
+      <script type="text/javascript" src="{{{.}}}"></script>
+    {{/each}}
+  </body>
+</html>

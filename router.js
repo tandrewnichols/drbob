@@ -15,5 +15,12 @@ router.use(bodyParser.json());
 router.use('/assets', express.static(__dirname + '/public'));
 
 // Routes for router
+router.get('/', function(req, res, next) {
+  res.render('index', {
+    title: 'Dr. Bob',
+    description: 'An awesome website!',
+    keywords: ['foo', 'bar', 'baz']
+  });
+});
 
 router.use(errorhandler());
