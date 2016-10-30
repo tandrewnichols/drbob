@@ -1,3 +1,3 @@
 module.exports = {
-  'default': ['clean', 'copy', 'less', 'server', 'open', 'watch']
+  'default': ['copy', 'less', 'server', 'notify:server', 'open', 'watch']
 };

@@ -1,9 +1,11 @@
 var spawn = require('child_process').spawn;
 var chalk = require('chalk');
+var grunt = require('grunt');
+var once = grunt.util._.once;
+grunt.util._.once = function(fn) { return fn; };
 var server;
 
 module.exports = function(grunt) {
-
   grunt.registerTask('server', 'Start the server', function() {
     var done = this.async();
 
@@ -12,9 +14,17 @@ module.exports = function(grunt) {
       server.kill();
     };
 
-    var startServer = function(restart) {
+    var startServer = function() {
       process.on('exit', kill);
-      server = spawn('node', ['service.js']);
+      server = grunt.util.spawn({
+        cmd: 'node',
+        args: ['service.js'],
+        env: process.env
+      }, function(err, code) {
+        if (code && code > 0) {
+          grunt.log.writeln(err, results, code);
+        }
+      });
       server.stdout.on('data', function(data) {
         data = data.toString();
         if (data.indexOf('listening on port') > -1) {
@@ -30,7 +40,7 @@ module.exports = function(grunt) {
       server.on('close', function(code, signal) {
         if (signal === 'SIGKILL') {
           process.removeListener('exit', kill);
-          startServer(true);
+          startServer();
         }
       });
     };
@@ -40,7 +50,7 @@ module.exports = function(grunt) {
     };
 
     if (server) {
-      server.kill('SIGKILL');
+      restartServer();
     } else {
       startServer();
     }
