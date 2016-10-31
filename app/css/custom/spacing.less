@@ -1,4 +1,8 @@
-html, body, .full, .container-fluid, .row { height: 100% }
+html, body, .full, .container-fluid, .row {
+  @media (min-width: @screen-md-min) {
+    height: 100%
+  }
+}
 
 // Define size variables
 @spacing-tiny: 5px;
@@ -23,7 +27,7 @@ html, body, .full, .container-fluid, .row { height: 100% }
 .spacing-south-east(@type; @amt) { @{type}-bottom: @amt; @{type}-right: @amt; }
 .spacing-north-west(@type; @amt) { @{type}-top: @amt; @{type}-left: @amt; }
 .spacing-south-west(@type; @amt) { @{type}-bottom: @amt; @{type}-left: @amt; }
-.spacing-all(@type; @amt) { padding: @amt; }
+.spacing-all(@type; @amt) { @{type}: @amt; }
 
 /* Create all the directional combinations for this size */
 .createSpacingClasses(@amt; @let) {

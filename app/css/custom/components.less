@@ -30,3 +30,18 @@
 .clickable:hover {
   cursor: pointer
 }
+
+.nav-bubbles {
+  .nav-pills;
+  > li {
+    > a {
+      border-radius: 90%;
+      border: 1px solid @gray-lighter;
+      line-height: @line-height-base;
+      font-size: 18px;
+    }
+    + li {
+      margin-left: 10px;
+    }
+  }
+}

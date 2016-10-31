@@ -1,3 +1,3 @@
 module.exports = {
-  'default': ['copy', 'less', 'server', 'notify:server', 'open', 'watch']
+  'default': ['copy', 'ngtemplates', 'concat', 'less', 'server', 'notify:server', 'open', 'watch']
 };

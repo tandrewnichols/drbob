@@ -9,5 +9,9 @@ module.exports = {
   less: {
     files: ['app/css/**/*.less'],
     tasks: ['less', 'notify:less']
+  },
+  js: {
+    files: ['app/js/**/*.js'],
+    tasks: ['concat', 'notify:js']
   }
 };
