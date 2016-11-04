@@ -13,5 +13,9 @@ module.exports = {
   js: {
     files: ['app/js/**/*.js'],
     tasks: ['concat', 'notify:js']
+  },
+  templates: {
+    files: ['app/templates/**/*.html'],
+    tasks: ['ngtemplates:dev', 'concat', 'notify:js']
   }
 };
