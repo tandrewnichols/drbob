@@ -1,3 +1,4 @@
 {
-  "PORT": 3000
+  "PORT": 3000,
+  "GOOGLE_MAPS_KEY": "AIzaSyDv4NJsMJShOdhjftcTvzxW27pACZ_qn1k"
 }

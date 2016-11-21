@@ -1,0 +1,5 @@
+<div>
+  <div ng-show="!isInOfficeDay" class="text-danger">Closed Today</div>
+  <div ng-show="isOpen" class="text-success">Open now</div>
+  <div ng-show="isInOfficeDay && !isInOfficeTime" class="text-success">Open today</div>
+</div>

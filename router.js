@@ -19,7 +19,8 @@ router.get('/', function(req, res, next) {
   res.render('index', {
     title: 'Dr. Bob',
     description: 'An awesome website!',
-    keywords: ['foo', 'bar', 'baz']
+    keywords: ['foo', 'bar', 'baz'],
+    googleMapsKey: nconf.get('GOOGLE_MAPS_KEY')
   });
 });
 
