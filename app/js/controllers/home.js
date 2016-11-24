@@ -38,15 +38,13 @@ angular.module('app').controller('HomeController', function($scope, $location) {
     if (window.google && window.google.maps) {
       $scope.createMap();
     } else {
-      // Otherwise, watch for it to be done and then create the map.
-      var $watcher = $scope.$watch(function() {
-        return window.google && window.google.maps;
-      }, function(newVal) {
-        if (newVal) {
-          $watcher();
+      // Otherwise, poll for it to be done and then create the map.
+      var interval = $interval(function() {
+        if (window.google && window.google.maps) {
           $scope.createMap();
+          $interval.cancel(interval);
         }
-      });
+      }, 50);
     }
   };
 
@@ -55,13 +53,15 @@ angular.module('app').controller('HomeController', function($scope, $location) {
       lat: 40.758951,
       lng: -82.480885
     };
-    var map = new google.maps.Map(document.getElementById('map'), {
-      zoom: 15,
-      center: latlng
-    });
-    var marker = new google.maps.Marker({
-      position: latlng,
-      map: map
+    [].forEach.call(document.getElementsByClassName('google-map'), function(element) {
+      var map = new google.maps.Map(element, {
+        zoom: 15,
+        center: latlng
+      });
+      var marker = new google.maps.Marker({
+        position: latlng,
+        map: map
+      });
     });
     $scope._mapInited = true;
   };
