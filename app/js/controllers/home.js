@@ -17,6 +17,7 @@ angular.module('app').controller('HomeController', function($scope, $location) {
   };
 
   $scope.checkIsOpen = function() {
+    // Only do these calculations the first time
     if ('isInOfficeDay' in $scope) return;
 
     var now = moment();
@@ -30,6 +31,26 @@ angular.module('app').controller('HomeController', function($scope, $location) {
   };
 
   $scope.initMap = function() {
+    // Only load the map the first time
+    if ($scope._mapInited) return;
+
+    // If the google script has already loaded, create the map now.
+    if (window.google && window.google.maps) {
+      $scope.createMap();
+    } else {
+      // Otherwise, watch for it to be done and then create the map.
+      var $watcher = $scope.$watch(function() {
+        return window.google && window.google.maps;
+      }, function(newVal) {
+        if (newVal) {
+          $watcher();
+          $scope.createMap();
+        }
+      });
+    }
+  };
+
+  $scope.createMap = function() {
     var latlng = {
       lat: 40.758951,
       lng: -82.480885
@@ -42,5 +63,6 @@ angular.module('app').controller('HomeController', function($scope, $location) {
       position: latlng,
       map: map
     });
+    $scope._mapInited = true;
   };
 });
