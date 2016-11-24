@@ -5,6 +5,7 @@ html, body, .full, .container-fluid, .row {
 }
 
 // Define size variables
+@spacing-none: 0;
 @spacing-tiny: 5px;
 @spacing-small: 10px;
 @spacing-medium: 15px;
@@ -64,6 +65,7 @@ html, body, .full, .container-fluid, .row {
 }
 
 /* The starting point. Create padding and margin classes for each direction for each size. */
+.createSpacingClasses(@spacing-none; n);
 .createSpacingClasses(@spacing-tiny; t);
 .createSpacingClasses(@spacing-small; s);
 .createSpacingClasses(@spacing-medium; m);
