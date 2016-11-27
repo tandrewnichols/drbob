@@ -9,10 +9,11 @@
     <title>{{ title }}</title>
     <meta name="description" content="{{ description }}" />
     <meta name="keywords" content="{{join keywords ', '}}" />
-    <link rel="stylesheet" type="text/css" href="/assets/css/app.css" media="all" />
+    <link rel="stylesheet" type="text/css" href="/assets/css/app.css" media="all">
     {{#each styles}}
-      <link rel="stylesheet" type="text/css" href="{{{.}}}" media="all" />
+      <link rel="stylesheet" type="text/css" href="{{{.}}}" media="all">
     {{/each}}
+    <link rel="icon" href="/assets/img/sign.jpg" type="image/x-icon">
   </head>
   <body>
     {{{body}}}

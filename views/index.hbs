@@ -1,8 +1,9 @@
-<div id="main" class="full" ng-controller="HomeController" ng-init="init()">
+<div id="main" class="full" ng-controller="HomeController" ng-init="init()" itemscope itemtype="http://health-lifesci.schema.org/MedicalClinic">
+  <link itemprop="sameAs" href="http://www.manta.com/c/mm4rqpx/gilbert-robert-j-dc">
   <div class="hidden-xs hidden-sm full">
-    {{> home }}
+    {{> index }}
   </div>
   <div class="hidden-md hidden-lg">
-    {{> home-mobile }}
+    {{> index-mobile }}
   </div>
 </div>

@@ -1,5 +1,10 @@
-<div class="ng-cloak">
-  <h1 ng-show="view === 'home'" class="{{#if mobile }}h4{{else}}h2{{/if}}">Dr. Robert J Gilbert D.C., DABCI</h1>
+<div class="ng-cloak" itemprop="founder" itemscope itemtype="http://schema.org/Person">
+  <h1 ng-show="view === 'home'" class="{{#if mobile }}h4{{else}}h2{{/if}}">
+    <span itemprop="honorificPrefix">Dr.</span>&nbsp;
+    <span itemprop="name">Robert J Gilbert</span>&nbsp;
+    <span itemprop="honorificSuffix">D.C.</span>,&nbsp;
+    <span itemprop="honorificSuffix">DABCI</span>
+  </h1>
   <h1 ng-show="view === 'info'" class="{{#if mobile }}h4{{else}}h2{{/if}}">Info</h1>
   <h1 ng-show="view === 'about'" class="{{#if mobile }}h4{{else}}h2{{/if}}">About</h1>
   <h1 ng-show="view === 'products'" class="{{#if mobile }}h4{{else}}h2{{/if}}">Products & Services</h1>
