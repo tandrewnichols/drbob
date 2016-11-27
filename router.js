@@ -18,6 +18,7 @@ router.use('/assets', express.static(__dirname + '/public'));
 router.get('/', function(req, res, next) {
   res.render('index', {
     title: 'Dr. Bob',
+    // TODO: Add real description and keywords
     description: 'An awesome website!',
     keywords: ['foo', 'bar', 'baz'],
     googleMapsKey: nconf.get('GOOGLE_MAPS_KEY')
