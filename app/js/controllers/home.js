@@ -1,4 +1,4 @@
-angular.module('app').controller('HomeController', function($scope, $location) {
+angular.module('app').controller('HomeController', function($scope, $location, $interval) {
   $scope.init = function() {
     $scope.view = $location.search().view || 'home';
     if ($scope.view === 'info') {
