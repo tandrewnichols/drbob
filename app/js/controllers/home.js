@@ -1,6 +1,7 @@
 angular.module('app').controller('HomeController', function($scope, $location, $interval) {
   $scope.init = function() {
-    $scope.view = $location.search().view || 'home';
+    var path = $location.path();
+    $scope.view = path === '/' ? 'home' : path.substring(1);
     if ($scope.view === 'info') {
       $scope.checkIsOpen();
       $scope.initMap();
@@ -9,11 +10,6 @@ angular.module('app').controller('HomeController', function($scope, $location, $
 
   $scope.setView = function(view) {
     $scope.view = view;
-    if (view === 'home') {
-      delete $location.search().view;
-    } else if ($location.search().view !== view) {
-      $location.search('view', view);
-    }
   };
 
   $scope.checkIsOpen = function() {

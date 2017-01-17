@@ -14,7 +14,8 @@ router.use(cookieParser());
 router.use(bodyParser.json());
 router.use('/assets', express.static(__dirname + '/public'));
 
-var handler = function(req, res, next) {
+// Routes for router
+router.get('*', function(req, res, next) {
   res.render('index', {
     title: 'Dr. Bob',
     // TODO: Add real description and keywords
@@ -22,12 +23,6 @@ var handler = function(req, res, next) {
     keywords: ['foo', 'bar', 'baz'],
     googleMapsKey: nconf.get('GOOGLE_MAPS_KEY')
   });
-};
-
-// Routes for router
-router.get('/', handler);
-router.get('/info', handler);
-router.get('/about', handler);
-router.get('/products', handler);
+});
 
 router.use(errorhandler());
