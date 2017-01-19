@@ -18,7 +18,7 @@ router.use('/assets', express.static(__dirname + '/public'));
 router.get('*', function(req, res, next) {
   res.render('index', {
     title: 'Dr. Robert J. Gilbert, chiropractor',
-    description: 'Dr. Robert J. Gilbert in Mansfield, OH specializes in chiropractic treatment, cranial-biotic techniques, auriculotherapy, and nutritional counseling and products.',
+    description: 'Dr. Robert J. Gilbert in Mansfield, OH specializes in chiropractic treatment, craniobiotic techniques, auriculotherapy, and nutritional counseling and products.',
     googleMapsKey: nconf.get('GOOGLE_MAPS_KEY')
   });
 });
