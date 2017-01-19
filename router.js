@@ -17,10 +17,8 @@ router.use('/assets', express.static(__dirname + '/public'));
 // Routes for router
 router.get('*', function(req, res, next) {
   res.render('index', {
-    title: 'Dr. Bob',
-    // TODO: Add real description and keywords
-    description: 'An awesome website!',
-    keywords: ['foo', 'bar', 'baz'],
+    title: 'Dr. Robert J. Gilbert, chiropractor',
+    description: 'Dr. Robert J. Gilbert in Mansfield, OH specializes in chiropractic treatment, cranial-biotic techniques, auriculotherapy, and nutritional counseling and products.',
     googleMapsKey: nconf.get('GOOGLE_MAPS_KEY')
   });
 });
