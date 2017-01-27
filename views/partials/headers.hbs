@@ -1,14 +1,14 @@
 <div class="ng-cloak" itemprop="founder" itemscope itemtype="http://schema.org/Person">
   <div>
-    <h1 ng-show="view === 'home'" class="{{#if mobile }}h5{{else}}h2{{/if}}" {{#if mobile}}ng-class="{ mbn: view === 'home' }"{{/if}}>
+    <h1 ng-show="view === 'home'" class="{{#if mobile}}h5{{else}}h2{{/if}}" {{#if mobile}}ng-class="{ mbn: view === 'home' }"{{/if}}>
       <span itemprop="honorificPrefix">Dr.</span>&nbsp;
       <span itemprop="name">Robert J Gilbert</span>&nbsp;
-      <span itemprop="honorificSuffix">D.C.</span>,&nbsp;
-      <span itemprop="honorificSuffix">DABCI</span>
+      <span class="hidden-xs" itemprop="honorificSuffix">D.C.</span><span class="hidden-xs">,&nbsp;</span>
+      <span class="hidden-xs" itemprop="honorificSuffix">DABCI</span>
     </h1>
     <p ng-show="view === 'home'">953 Park Ave East  <span class="hidden-xs">&bull; </span><br class="hidden-sm hidden-md hidden-lg">(419) 589-6470</p>
   </div>
-  <h1 ng-show="view === 'info'" class="{{#if mobile }}h4{{else}}h2{{/if}}">Info</h1>
-  <h1 ng-show="view === 'about'" class="{{#if mobile }}h4{{else}}h2{{/if}}">About</h1>
-  <h1 ng-show="view === 'products'" class="{{#if mobile }}h4{{else}}h2{{/if}}">Products & Services</h1>
+  <h1 ng-show="view === 'info'" class="{{#if mobile}}h4{{else}}h2{{/if}}">Info</h1>
+  <h1 ng-show="view === 'about'" class="{{#if mobile}}h4{{else}}h2{{/if}}">About</h1>
+  <h1 ng-show="view === 'products'" class="{{#if mobile}}h4{{else}}h2{{/if}}">Products & Services</h1>
 </div>
