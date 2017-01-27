@@ -1,0 +1,26 @@
+<div class="row mbl">
+  <div class="col-sm-8">
+    Some text about Dr. Bob. It is deep and well-meaning and full of puns about fungal teas, the better to entertain guests with.
+  </div>
+  <div class="col-sm-4">
+    <img alt="Dr. Rober James Gilbert" src="/assets/img/drbob.jpg" height="300" style="margin:auto;">
+  </div>
+</div>
+<div class="row mbm">
+  <div class="col-sm-12 text-center">
+    <h2>Tour the Office</h2>
+    <hr>
+  </div>
+</div>
+<div class="row">
+  <div class="col-sm-12">
+    <div uib-carousel active="0" interval="3000">
+      <div uib-slide ng-repeat="slide in slides" index="$index">
+        <img ng-src="/assets/img/carousel/{{#ng}}slide.image{{/ng}}.jpg" height="535" style="margin:auto;">
+        <div class="carousel-caption">
+          <p>{{#ng}}slide.caption{{/ng}}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

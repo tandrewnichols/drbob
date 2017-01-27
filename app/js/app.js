@@ -1,5 +1,5 @@
-/*'ngAnimate', 'ngRoute', 'ngResource', 'ngSanitize', 'ui.router', 'frapontillo.bootstrap-switch'*/
-angular.module('app', ['ui.bootstrap', 'ngRoute']).run(function($rootScope, $timeout, $window) {
+/*'ngResource', 'ngSanitize', 'ui.router', 'frapontillo.bootstrap-switch'*/
+angular.module('app', ['ui.bootstrap', 'ngRoute', 'ngAnimate']).run(function($rootScope, $timeout, $window) {
   // Set cookie defaults so we don't have to do this in every controller
   //Cookies.defaults = { path: '/', domain: config.cookieDomain };
   //$rootScope.state = $state;

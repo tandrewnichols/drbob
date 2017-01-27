@@ -6,6 +6,45 @@ angular.module('app').controller('HomeController', function($scope, $location, $
       $scope.checkIsOpen();
       $scope.initMap();
     }
+
+    $scope.slides = [
+      {
+        image: 'front',
+        caption: 'View from the Road'
+      },
+      {
+        image: 'outside',
+        caption: 'Entry Way'
+      },
+      {
+        image: 'waiting-room',
+        caption: 'Waiting Room'
+      },
+      {
+        image: 'products-shelf',
+        caption: 'Nutritional Products'
+      },
+      {
+        image: 'room-red',
+        caption: 'Patient Room 1'
+      },
+      {
+        image: 'room-blue',
+        caption: 'Patient Room 2'
+      },
+      {
+        image: 'room-white',
+        caption: "You don't want to have to need this room"
+      },
+      {
+        image: 'xray',
+        caption: 'X-ray Machine'
+      },
+      {
+        image: 'degrees',
+        caption: 'Credentials'
+      }
+    ];
   };
 
   $scope.setView = function(view) {
