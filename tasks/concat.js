@@ -8,9 +8,11 @@ module.exports = {
       'bower_components/angular-bootstrap/ui-bootstrap-tpls.js',
       'bower_components/angular-route/angular-route.js',
       'bower_components/angular-animate/angular-animate.js',
+      'app/js/lib/jquery-plugins.js',
       'app/js/app.js',
       'app/js/router.js',
-      'app/js/controllers/home.js'
+      'app/js/controllers/home.js',
+      'app/js/directives/scroll-to.js'
       //'public/js/template-cache.js'
     ],
     dest: 'public/js/app.js'

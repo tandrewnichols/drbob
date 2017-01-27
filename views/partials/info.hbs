@@ -1,7 +1,7 @@
-<div>
+<div class="mbl">
   <div>
     <div class="pull-left mrx">
-      <span class="fa fa-clock-o text-muted" style="font-size: 32px"></span>
+      <span class="fa fa-clock-o text-muted icon-header"></span>
     </div>
     <div class="h3">
       {{> open-status }}
@@ -12,7 +12,7 @@
   </div>
   <div class="mtj">
     <div class="pull-left mrx">
-      <span class="fa fa-phone text-muted" style="font-size: 32px"></span>
+      <span class="fa fa-phone text-muted icon-header"></span>
     </div>
     <div class="h3">Contact Us</div>
     <div class="mtl">
@@ -20,14 +20,12 @@
       <div class="hidden-md hidden-lg mbm">
         <a href="tel:+14195896479" class="btn btn-primary">Call <span itemprop="telephone">(419) 589-6470</span></a>
       </div>
-      <p>
-      No automated phone scripts at this practice! Our chiropractic assistants, <span itemprop="employee" itemscope itemtype="http://schema.org/Person"><span itemprop="name">Sallie</span></span> & <span itemprop="employee" itemscope itemtype="http://schema.org/Person"><span itemprop="name">April</span></span>, will be happy to take your call during office hours. Or leave us a message at any time, and we will return your call as soon as we can.
-      </p>
+      <p>No automated phone scripts at this practice! Our chiropractic assistants, <a href="" scroll-to="#sallie">Sallie</a> & <a href="" scroll-to="#april">April</a>, will be happy to take your call during office hours. Or leave us a message at any time, and we will return your call as soon as we can.</p>
     </div>
   </div>
   <div class="mtj">
     <div class="pull-left mrx">
-      <span class="glyphicon glyphicon-map-marker text-muted" style="font-size: 32px"></span>
+      <span class="glyphicon glyphicon-map-marker text-muted icon-header"></span>
     </div>
     <div class="h3">Directions</div>
     <div class="mtl">
@@ -44,6 +42,26 @@
       </p>
       <p>Two miles east on Park Avenue East from downtown Mansfield, between Illinois Avenue and Stewart Road.</p>
       <div class="google-map" style="height: {{#if mobile}}300px{{else}}400px{{/if}}; width: 100%"></div>
+    </div>
+  </div>
+  <div class="mtj">
+    <div class="pull-left mrx">
+      <span class="fa fa-female text-muted icon-header"></span>
+    </div>
+    <div class="h3">Staff</div>
+    <div class="mtl">
+      <div class="row">
+        <div id="sallie" class="col-xs-12 col-sm-5" itemprop="employee" itsemscope itemtype="http://schema.org/Person">
+          <h4 itemprop="name">Sallie</h4>
+          <meta itemprop="jobTitle" content="Receptionist">
+          <img itemprop="photo" alt="Sallie" src="/assets/img/sallie.jpg" height="300">
+        </div>
+        <div id="april" class="col-xs-12 col-sm-5" itemprop="employee" itsemscope itemtype="http://schema.org/Person">
+          <h4 itemprop="name">April</h4>
+          <meta itemprop="jobTitle" content="Receptionist">
+          <img itemprop="photo" alt="April" src="/assets/img/april.jpg" height="300">
+        </div>
+      </div>
     </div>
   </div>
 </div>
