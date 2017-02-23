@@ -12,11 +12,11 @@
     </div>
   </div>
   <div class="row mtl">
-    <div class="col-xs-3">
+    <div class="col-xs-12 col-sm-3">
       <img src="/assets/img/auriculotherapy.jpg" style="width: 100%">
     </div>
-    <div class="col-xs-9">
-      <h4 class="mtn">Auriculotherapy</h4>
+    <div class="col-xs-12 col-sm-9">
+      <h4 class="{{#if mobile}}mtl{{else}}mtn{{/if}}">Auriculotherapy</h4>
       <p><a href="http://www.auriculotherapy.com/" target="_blank">Auriculo-therapy</a> (auriculo refers to the ear) was originally practiced by Dr. Nogier, a French M.D. and was based on the Chinese method of acupuncture. Dr. Nogier pioneered the use of a small electrical current placed on key ear points as an effective means of helping acute and chronic pain, as well as addiction and other health conditions.</p>
     </div>
   </div>
@@ -27,11 +27,14 @@
     </div>
   </div>
   <div class="row mtl">
-    <div class="col-xs-8">  
-      <h4 class="mtn">Products</h4>
+    <div class="col-xs-12 visible-xs">
+      <img src="/assets/img/products.jpg" style="width: 100%">
+    </div>
+    <div class="col-xs-12 col-sm-8">  
+      <h4 class="{{#if mobile}}mtl{{else}}mtn{{/if}}">Products</h4>
       <p>This office primarily uses <a href="https://www.standardprocess.com" target="_blank">Standard Process</a> and <a href="http://www.mediherb.com" target="_blank">Mediherb</a> Nutritional products which are unparallelled in the health care field. Unless you are using high quality phytonutrient products, you will not achieve the desired results you are looking for.</p>
     </div>
-    <div class="col-xs-4">
+    <div class="col-sm-4 hidden-xs">
       <img src="/assets/img/products.jpg" style="width: 100%">
     </div>
   </div>
