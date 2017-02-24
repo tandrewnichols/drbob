@@ -14,8 +14,10 @@
     {{/each}}
     <link rel="icon" href="/assets/img/favicon.png" type="image/x-icon">
     <base href="/">
+    {{> gtm }}
   </head>
   <body>
+    {{> gtm-iframe }}
     {{{body}}}
     <script type="text/javascript" src="/assets/js/app.js"></script>
     <script async defer src="https://maps.googleapis.com/maps/api/js?key={{ googleMapsKey }}"></script>
