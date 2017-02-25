@@ -6,7 +6,7 @@
   "scripts": {
     "test": "grunt",
     "start": "node server",
-    "install": "grunt build"
+    "install": "bower install && grunt build"
   },
   "repository": {
     "type": "git",
@@ -39,6 +39,7 @@
     "request": "^2.75.0"
   },
   "devDependencies": {
+    "bower": "^1.8.0",
     "grunt": "^1.0.1",
     "grunt-angular-templates": "^1.1.0",
     "grunt-contrib-clean": "^1.0.0",
