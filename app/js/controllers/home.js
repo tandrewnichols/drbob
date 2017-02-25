@@ -72,6 +72,11 @@ angular.module('app').controller('HomeController', function($scope, $location, $
   $scope.init = function() {
     var path = $location.path();
     $scope.view = path === '/' ? 'home' : path.substring(1);
+    if (['home', 'info', 'about', 'products'].indexOf($scope.view) === -1) {
+      $scope.view = 'home'
+      $location.url('/');
+    }
+
     if ($scope.view === 'info') {
       $scope.checkIsOpen();
       $scope.initMap();

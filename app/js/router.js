@@ -3,6 +3,5 @@ angular.module('app').config(function($routeProvider, $locationProvider) {
   $routeProvider.when('/', {})
     .when('/info', {})
     .when('/about', {})
-    .when('/products', {})
-    .otherwise('/');
+    .when('/products', {});
 });
