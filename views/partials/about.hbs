@@ -11,4 +11,15 @@
   <h4>My Background</h4>
   <p>I have been in practice since I graduated from Palmer College of Chiropractic in 1979. The road to chiropractic came through an intense desire to help people who were falling through the cracks in the medical system. After attaining a diplomate in internal disorder in 1993 through the American Board of Chiropractic Internists, our goal remains to offer the best service and products we can provide.</p>
   <p>My wife, Melanie, and I reside in the Mansfield area and are the proud parents of a son, Jim, and his wife Laura, and a daughter, Kristine, and her husband Andrew. We are also the proud grandparents of four adorable grandchildren.</p>
+  <hr>
+  <h4>My Family</h4>
+  <p>I've been married over 35 years to my wife Melanie. Together we have a son, Jim, and his wife Laura, and a daugher, Kristine, and her husband Andrew, as well as 4 grandchildren, Natalie, Jack, Asher, and Clara.</p>
+  <div uib-carousel active="0" interval="3000">
+    <div uib-slide ng-repeat="slide in family" index="$index">
+      <img ng-src="/assets/img/family/{{#ng}}slide.image{{/ng}}.jpg" height="{{#if mobile}}200{{else}}535{{/if}}" style="margin:auto;">
+      <div class="carousel-caption">
+        <p>{{#ng}}slide.caption{{/ng}}</p>
+      </div>
+    </div>
+  </div>
 </div>

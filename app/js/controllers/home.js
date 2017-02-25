@@ -1,4 +1,74 @@
 angular.module('app').controller('HomeController', function($scope, $location, $interval) {
+  $scope.slides = [
+    {
+      image: 'front',
+      caption: 'View from the Road'
+    },
+    {
+      image: 'outside',
+      caption: 'Entry Way'
+    },
+    {
+      image: 'waiting-room',
+      caption: 'Waiting Room'
+    },
+    {
+      image: 'products-shelf',
+      caption: 'Nutritional Products'
+    },
+    {
+      image: 'room-red',
+      caption: 'Patient Room 1'
+    },
+    {
+      image: 'room-blue',
+      caption: 'Patient Room 2'
+    },
+    {
+      image: 'room-white',
+      caption: "You don't want to have to need this room"
+    },
+    {
+      image: 'xray',
+      caption: 'X-ray Machine'
+    },
+    {
+      image: 'degrees',
+      caption: 'Credentials'
+    }
+  ];
+
+  $scope.family = [
+    {
+      image: 'wife',
+      caption: 'Melanie'
+    },
+    {
+      image: 'son',
+      caption: 'Jim'
+    },
+    {
+      image: 'grandkids1',
+      caption: 'Natalie'
+    },
+    {
+      image: 'grandkids2',
+      caption: 'Natalie and Asher'
+    },
+    {
+      image: 'grandkids3',
+      caption: 'Asher'
+    },
+    {
+      image: 'grandkids4',
+      caption: 'Natalie and Jack'
+    },
+    {
+      image: 'grandkids5',
+      caption: 'Clara'
+    }
+  ];
+
   $scope.init = function() {
     var path = $location.path();
     $scope.view = path === '/' ? 'home' : path.substring(1);
@@ -6,45 +76,6 @@ angular.module('app').controller('HomeController', function($scope, $location, $
       $scope.checkIsOpen();
       $scope.initMap();
     }
-
-    $scope.slides = [
-      {
-        image: 'front',
-        caption: 'View from the Road'
-      },
-      {
-        image: 'outside',
-        caption: 'Entry Way'
-      },
-      {
-        image: 'waiting-room',
-        caption: 'Waiting Room'
-      },
-      {
-        image: 'products-shelf',
-        caption: 'Nutritional Products'
-      },
-      {
-        image: 'room-red',
-        caption: 'Patient Room 1'
-      },
-      {
-        image: 'room-blue',
-        caption: 'Patient Room 2'
-      },
-      {
-        image: 'room-white',
-        caption: "You don't want to have to need this room"
-      },
-      {
-        image: 'xray',
-        caption: 'X-ray Machine'
-      },
-      {
-        image: 'degrees',
-        caption: 'Credentials'
-      }
-    ];
   };
 
   $scope.setView = function(view) {
