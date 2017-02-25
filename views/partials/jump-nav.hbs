@@ -1,14 +1,14 @@
 <ul class="nav nav-bubbles" style="display: inline-block">
   <li>
-    <a href="/" {{#unless mobile}}uib-popover="Home" popover-append-to-body="true" popover-trigger="'mouseenter'" popover-placement="top" {{/unless}}class="hover-up" ng-click="view = 'home'"><span class="glyphicon glyphicon-home"></span></a>
+    <a href="/" event-label="Home" {{#unless mobile}}uib-popover="Home" popover-append-to-body="true" popover-trigger="'mouseenter'" popover-placement="top" {{/unless}}class="hover-up" ng-click="view = 'home'"><span class="glyphicon glyphicon-home"></span></a>
   </li>
   <li>
-    <a href="/info" {{#unless mobile}}uib-popover="Info" popover-append-to-body="true" popover-trigger="'mouseenter'" popover-placement="top" {{/unless}}class="hover-up" ng-click="checkIsOpen(); initMap(); view = 'info'"><span class="glyphicon glyphicon-info-sign"></span></a>
+    <a href="/info" event-label="Info" {{#unless mobile}}uib-popover="Info" popover-append-to-body="true" popover-trigger="'mouseenter'" popover-placement="top" {{/unless}}class="hover-up" ng-click="checkIsOpen(); initMap(); view = 'info'"><span class="glyphicon glyphicon-info-sign"></span></a>
   </li>
   <li>
-    <a href="/about" {{#unless mobile}}uib-popover="About Me" popover-append-to-body="true" popover-trigger="'mouseenter'" popover-placement="top" {{/unless}}class="hover-up" ng-click="view = 'about'"><span class="fa fa-user-md"></span></a>
+    <a href="/about" event-label="About Me" {{#unless mobile}}uib-popover="About Me" popover-append-to-body="true" popover-trigger="'mouseenter'" popover-placement="top" {{/unless}}class="hover-up" ng-click="view = 'about'"><span class="fa fa-user-md"></span></a>
   </li>
   <li>
-    <a href="/products" {{#unless mobile}}uib-popover="Products & Services" popover-append-to-body="true" popover-trigger="'mouseenter'" popover-placement="top" {{/unless}}class="hover-up" ng-click="view = 'products'"><span class="glyphicon glyphicon-barcode"></span></a>
+    <a href="/products" event-label="Products" {{#unless mobile}}uib-popover="Products & Services" popover-append-to-body="true" popover-trigger="'mouseenter'" popover-placement="top" {{/unless}}class="hover-up" ng-click="view = 'products'"><span class="glyphicon glyphicon-barcode"></span></a>
   </li>
 </ul>
